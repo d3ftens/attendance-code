@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer>
+    function adminLogin() {
+      const email = document.getElementById('adminEmail').value.trim();
+      const password = document.getElementById('adminPassword').value.trim();
+      const errorDisplay = document.getElementById('loginError');
+
+      const correctEmail = 'admin@pgpc.edu';
+      const correctPassword = 'admin123';
+
+      if (email === correctEmail && password === correctPassword) {
+        window.location.href = 'admin_dashboard.html';
+      } else {
+        errorDisplay.textContent = 'Incorrect password or email';
+      }
+    }
+
+    // Live time and date
+    function updateDateTime() {
+      const now = new Date();
+      const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      const date = now.toLocaleDateString(undefined, {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+
+      document.getElementById('currentTime').textContent = `TIME: ${time}`;
+      document.getElementById('currentDate').textContent = `DATE: ${date}`;
+    }
+
+    setInterval(updateDateTime, 1000);
+    window.onload = updateDateTime;
+  </script>
+</head>
+<body>
+  <div class="sidebar">
+    <a href="index.html" class="nav-button">Home</a>
+    <a href="admin_login.html" class="nav-button">Admin</a>
+    <a href="attendance.html" class="nav-button">Attendance</a>
+  </div>
+
+  <div class="main-content">
+    <div class="pgpc-header">
+      <h1 class="pgpc-title">Padre Garcia Polytechnic College</h1>
+      <!-- Wrap the logo with an anchor tag linking to the Facebook page -->
+      <a href="https://www.facebook.com/PadreGarciaPolytechnicCollege" target="_blank">
+        <img src="file:///C:/Users/Admin/OneDrive/Documents/IMAGE/pgpclogo.png" alt="PGPC Logo" class="pgpc-logo">
+      </a>
+    </div>
+    <p class="tagline">Taga PGPC ako: Disiplinado! Mabuting tao! Ipinag mamalaki ko!</p>
+
+    <div class="form-container">
+      <h2>Admin Login</h2>
+      <input type="email" placeholder="Email" id="adminEmail">
+      <input type="password" placeholder="Password" id="adminPassword">
+      <button onclick="adminLogin()">Login</button>
+      <p id="loginError" class="error-message"></p>
+    </div>
+  </div>
+
+  <div class="datetime">
+    <div id="currentTime"></div>
+    <div id="currentDate"></div>
+  </div>
+</body>
+</html>

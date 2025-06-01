@@ -1,0 +1,130 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('file:///C:/Users/Admin/OneDrive/Documents/IMAGE/bgpgpc.jpg') no-repeat center center fixed;
+    background-size: 1500px 1000px;
+    font-family: Arial, sans-serif;
+    color: #f5f5dc; /* Dirty white */
+}
+
+/* Bar above the website for logo, header, and tagline */
+.top-bar {
+    background-color: rgb(6, 10, 68);
+    padding: 5px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 50px; /* Reduced padding */
+    justify-content: flex-start;
+    gap: 15px; /* Reduced gap */
+}
+
+.dashboard-header img.pgpc-logo {
+    height: 80px; 
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pgpc-title {
+    font-size: 36px; /* Reduced font size */
+    font-weight: 1000;
+    color: #FFC300;
+    -webkit-text-stroke: 2px #001f3f;
+    text-stroke: 2px #001f3f;
+    margin: 0;
+}
+
+.tagline {
+    font-size: 18px; /* Reduced font size */
+    font-weight: bold;
+    color: #f5f5dc;
+    margin-top: 5px;
+}
+
+.main-content {
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px; /* Ensure space for the bar */
+}
+
+.form-container {
+    background: none;
+    box-shadow: none;
+    width: auto;
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    gap: 20px;
+    margin-bottom: 20px;
+    align-items: center; /* Center form elements */
+}
+
+/* New styles to center and align the search bar inputs */
+.search-bar {
+    display: flex;          /* Align inputs side by side */
+    gap: 20px;              /* Space between the inputs */
+    margin-top: 10px;       /* Margin from the label */
+    justify-content: center; /* Make sure it is centered */
+}
+
+.form-container input {
+    background-color: #001f3f;
+    color: #f5f5dc;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    width: 200px; /* Set width for inputs */
+}
+
+.form-container .label {
+    font-size: 24px;
+    font-weight: bold;
+    color: #dddfe0;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: -50px;
+    position: relative;
+    left: 3px;
+}
+
+#attendanceTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 18px;
+    margin-bottom: 40px; /* Ensure space for datetime */
+}
+
+#attendanceTable thead {
+    background-color: #001f3f;
+}
+
+#attendanceTable th,
+#attendanceTable td {
+    padding: 10px;
+    border: 2px solid white;
+    text-align: center;
+}
+
+.datetime {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: right;
+    color: #ffffff;
+    font-size: 16px;
+}

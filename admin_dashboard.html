@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="dashboard.js" defer></script>
+</head>
+<body>
+  <!-- White bar with logo, header, and tagline -->
+  <div class="top-bar">
+    <img src="file:///C:/Users/Admin/OneDrive/Documents/IMAGE/pgpclogo.png" alt="PGPC Logo" class="pgpc-logo">
+    <div class="header-text">
+      <h1 class="pgpc-title">Padre Garcia Polytechnic College</h1>
+      <p class="tagline">Taga PGPC ako: Disiplinado! Mabuting tao! Ipinag mamalaki ko!</p>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="form-container">
+        <div class="label">LOG ATTENDANCE</div>
+        <div class="search-bar">
+            <input type="text" id="searchDate" placeholder="Date:">
+            <input type="text" id="searchName" placeholder="Student's Name:">
+        </div>
+    </div>
+</div>
+
+
+    <table id="attendanceTable">
+      <thead>
+        <tr>
+          <th>Student</th>
+          <th>Date</th>
+          <th>Log In</th>
+          <th>Log Out</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <!-- Data will populate here -->
+      </tbody>
+    </table>
+  </div>
+
+  <div class="datetime">
+    <div id="currentTime"></div>
+    <div id="currentDate"></div>
+  </div>
+</body>
+</html>
